@@ -4,7 +4,7 @@ public class P10_SecondMaxNumInArry {
 
 	public static void main(String[] args) {
 
-		int[] arr = { 10, 20, 34, 2 };
+		int[] arr = { 10, 20, 500, 34, 2 };
 
 		int largest = arr[0];
 		int secondLargest = arr[1];
