@@ -20,7 +20,7 @@ public class P07_CustomException {
 
 		int amountToWithdraw = sc.nextInt();
 		if (amountToWithdraw > bankBalance) {
-			throw new CustomException("Withdraw amount is greater than bank balance.");
+			throw new CustomException("Sorry, insufficient balance, you need more 500 Rs. To perform this transaction.");
 		} else {
 			bankBalance = bankBalance - amountToWithdraw;
 			System.out.println("Remaining bank balance:" + bankBalance);
