@@ -58,7 +58,8 @@
 	            }
 	        });
 	    });
-	
+
+	    
 	    $('#registerForm').on('submit', function(event) {
 	        var password = $('#password').val();
 	        var confirmPassword = $('#confirmPassword').val();
