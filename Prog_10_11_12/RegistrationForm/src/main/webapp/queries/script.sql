@@ -1,0 +1,19 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(50) NOT NULL,
+    lname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    otp VARCHAR(6),
+    verified BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sender_email VARCHAR(255) NOT NULL,
+    recipient_email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sender_email) REFERENCES users(email) ON DELETE CASCADE,
+    FOREIGN KEY (recipient_email) REFERENCES users(email) ON DELETE CASCADE
+);
